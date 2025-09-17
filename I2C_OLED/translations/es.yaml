@@ -1,0 +1,87 @@
+configuration:
+  Show_Network_Screen:
+    name: Mostrar pantalla de información de red
+    description: >-
+      Cuando activas esta opción, muestra la dirección IP y el nombre de host.
+  Show_CPU_Screen:
+    name: Mostrar pantalla de estadísticas de CPU
+    description: >-
+      Cuando activas esta opción, muestra estadísticas de la CPU como temperatura, carga y tiempo de actividad.
+  Show_Memory_Screen:
+    name: Mostrar pantalla de información de memoria
+    description: >-
+      Cuando activas esta opción, muestra estadísticas de memoria, como cantidad utilizada, total y porcentaje de utilización.
+  Show_Storage_Screen:
+    name: Mostrar pantalla de información de almacenamiento
+    description: >-
+      Cuando activas esta opción, muestra estadísticas de almacenamiento, como cantidad utilizada, total y porcentaje de utilización.
+
+  Default_Duration:
+    name: Duración predeterminada
+    description: >-
+      Esta opción te permite establecer la duración predeterminada en segundos para mostrar cada pantalla.
+      Esta opción se ignora para las pantallas que tienen declaradas anulaciónes de la duración.
+  DateTime_Format:
+    name: Formato de fecha y hora
+    description: >-
+      Formato de la variable de texto estático {datetime}.
+  Temperature_Unit:
+    name: Unidad de temperatura
+    description: >-
+      Muestra la temperatura de la CPU en Celsius (C) o Fahrenheit (F).
+
+  Network_Screen_Duration:
+    name: Duración de la pantalla de información de red
+    description: >-
+      Cuánto tiempo en segundos se muestra la pantalla de información de red.
+  Network_Screen_Limit:
+    name: Límite máximo de pantalla de información de red
+    description: >-
+      Número de veces para que aparecerá la pantalla de información de red.
+
+  CPU_Screen_Duration:
+    name: Duración de la pantalla de estadísticas de CPU
+    description: >-
+      Cuánto tiempo en segundos se muestra la pantalla de estadísticas de CPU.
+  CPU_Screen_Limit:
+    name: Límite máximo de pantalla de estadísticas de CPU
+    description: >-
+      Número de veces que aparecerá la pantalla de estadísticas de CPU.
+
+  Memory_Screen_Duration:
+    name: Duración de la pantalla de información de memoria
+    description: >-
+      Cuánto tiempo en segundos se muestra la pantalla de información de memoria.
+  Memory_Screen_Limit:
+    name: Límite máximo de pantalla de información de memoria
+    description: >-
+      Número de veces que aparecerá la pantalla de información de memoria.
+
+  Storage_Screen_Duration:
+    name: Duración de la pantalla de información de almacenamiento
+    description: >-
+      Cuánto tiempo en segundos se muestra la pantalla de información de almacenamiento.
+  Storage_Screen_Limit:
+    name: Límite máximo de pantalla de información de almacenamiento
+    description: >-
+      Número de veces que aparecerá la pantalla de información de almacenamiento.
+
+  Debug_Mode:
+    name: Modo de depuración
+    description: >-
+      Habilita la depuración para el servicio imprimiendo registros de información en el registro del complemento.
+  I2C_bus:
+    name: Número de bus I2C
+    description: >-
+      Número de bus de tu dispositivo I2C.
+      Esto suele ser 1 (/dev/i2c-1), pero en ocasiones los dispositivos pueden informar esto como 0 (/dev/i2c-0).
+  Screenshot:
+    name: Ruta de captura de captura de pantalla
+    description: >-
+      Realiza una captura de pantalla mientras itera por cada pantalla en /media/[nombre_pantalla].png.
+      Para ver si se capturan imágenes, habilita la depuración.
+  Supervizor_token:
+    name: Token de Supervisor
+    description: >-
+     Token para permitir que el complemento se comunique con la API del Supervisor.
+     Esto es necesario para que el complemento funcione con ciertas estadísticas estrictas.

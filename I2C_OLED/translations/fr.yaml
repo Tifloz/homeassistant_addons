@@ -1,0 +1,87 @@
+  configuration:
+    Show_Network_Screen:
+      name: Afficher l'écran d'informations réseau
+      description: >-
+        Si activé, affiche l'IP et le nom d'hôte.
+    Show_CPU_Screen:
+      name: Afficher l'écran des statistiques CPU
+      description: >-
+        Si activé, affiche les statistiques CPU telles que la température, la charge et le temps de fonctionnement.
+    Show_Memory_Screen:
+      name: Afficher l'écran d'informations mémoire
+      description: >-
+        Si activé, affiche les statistiques mémoire, comme la quantité utilisée, totale et l'utilisation
+    Show_Storage_Screen:
+      name: Afficher l'écran d'informations stockage
+      description: >-
+        Si activé, affiche les statistiques de stockage, comme la quantité utilisée, totale et l'utilisation
+
+    Default_Duration:
+      name: Durée par défaut
+      description: >-
+        Cette option permet de définir la durée par défaut en secondes d'affichage de chaque écran.
+        Cette option est ignorée pour les écrans ayant une durée spécifique
+    DateTime_Format:
+      name: Format date et heure
+      description: >-
+        Format de la variable de texte statique {datetime}
+    Temperature_Unit:
+      name: Unité de température
+      description: >-
+        Affiche la température CPU en C (Celsius) ou F (Fahrenheit)
+
+    Network_Screen_Duration:
+      name: Durée de l'écran réseau
+      description: >-
+        Durée d'affichage de l'écran réseau en secondes
+    Network_Screen_Limit:
+      name: Limite d'affichage de l'écran réseau
+      description: >-
+        Nombre de fois que l'écran réseau peut apparaître.
+
+    CPU_Screen_Duration:
+      name: Durée de l'écran CPU
+      description: >-
+        Durée d'affichage de l'écran CPU en secondes
+    CPU_Screen_Limit:
+      name: Limite d'affichage de l'écran CPU
+      description: >-
+        Nombre de fois que l'écran CPU peut apparaître.
+
+    Memory_Screen_Duration:
+      name: Durée de l'écran mémoire
+      description: >-
+        Durée d'affichage de l'écran mémoire en secondes
+    Memory_Screen_Limit:
+      name: Limite d'affichage de l'écran mémoire
+      description: >-
+        Nombre de fois que l'écran mémoire peut apparaître.
+
+    Storage_Screen_Duration:
+      name: Durée de l'écran stockage
+      description: >-
+        Durée d'affichage de l'écran stockage en secondes
+    Storage_Screen_Limit:
+      name: Limite d'affichage de l'écran stockage
+      description: >-
+        Nombre de fois que l'écran stockage peut apparaître.
+
+    Debug_Mode:
+      name: Mode débogage
+      description: >-
+        Active le mode débogage en affichant les logs d'information dans le journal de l'addon.
+    I2C_bus:
+      name: Numéro du bus I2C
+      description: >-
+        Numéro du bus de votre périphérique I2C.
+        Il s'agit généralement de 1 (/dev/i2c-1), mais parfois certains appareils utilisent 0 (/dev/i2c-0).
+    Screenshot:
+      name: Chemin de capture d'écran
+      description: >-
+        Capture une capture d'écran de chaque écran dans /media/[screen_name].png
+        Pour vérifier la capture des images, activez le mode débogage.
+    Supervizor_token:
+      name: Jeton du superviseur
+      description: >-
+        Jeton permettant à l'addon de communiquer avec l'API Supervisor.
+        Requis pour certaines statistiques matérielles.
