@@ -10,7 +10,7 @@ RUN apk add --no-cache \
   py3-smbus
 
 RUN rm -Rf /I2C_OLED
-RUN git clone -b main --single-branch --depth 1 https://github.com/NickDub/rpi_i2c_oled.git /I2C_OLED
+RUN git clone -b main --single-branch --depth 1 https://github.com/Tifloz/rpi_i2c_oled.git /I2C_OLED
 
 COPY run.sh /
 WORKDIR /data
