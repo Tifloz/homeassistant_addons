@@ -1,0 +1,16 @@
+--- bin/Screens.py.orig	2025-11-16 23:14:02.607851073 +0000
++++ bin/Screens.py	2025-11-16 23:14:11.036863145 +0000
+@@ -53,10 +53,10 @@
+     font_icon = Utils.current_dir + "/fonts/lineawesome-webfont.ttf"
+     fonts = {}
+ 
+-    def __init__(self, duration, display = Display(), utils = Utils(), config = None):
+-        self.display = display
++    def __init__(self, duration, display = None, utils = None, config = None):
++        self.display = display if display is not None else Display()
+         self.duration = duration
+-        self.utils = utils
++        self.utils = utils if utils is not None else Utils()
+         self.config = config
+         self.font_size = 8
+         self.logger = logging.getLogger('Screen')
