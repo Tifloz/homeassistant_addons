@@ -12,6 +12,10 @@ RUN apk add --no-cache \
 RUN rm -Rf /I2C_OLED
 RUN git clone -b main --single-branch --depth 1 https://github.com/Tifloz/rpi_i2c_oled.git /I2C_OLED
 
+# Apply patch to fix default parameter initialization issue
+COPY fix-default-params.patch /tmp/
+RUN cd /I2C_OLED && patch -p0 < /tmp/fix-default-params.patch
+
 COPY run.sh /
 WORKDIR /data
 RUN chmod a+x /run.sh
